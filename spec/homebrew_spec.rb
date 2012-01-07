@@ -1,5 +1,5 @@
 # require 'rspec'
-require_relative '../make/darwin/homebrew'
+require File.expand_path(File.dirname(__FILE__) + '/../make/darwin/homebrew')
 
 describe Homebrew do
   let(:shell) { double }
