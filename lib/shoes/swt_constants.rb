@@ -12,6 +12,11 @@ module SwtConstants
     Shell = org.eclipse.swt.widgets.Shell
     Display = org.eclipse.swt.widgets.Display
     Button = org.eclipse.swt.widgets.Button
+    Label = org.eclipse.swt.widgets.Label
+    Canvas = org.eclipse.swt.widgets.Canvas
   end
 
+  module SWT::Graphics
+    Image = org.eclipse.swt.graphics.Image
+  end
 end

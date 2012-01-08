@@ -1,6 +1,14 @@
+# -*- coding: utf-8 -*-
 require 'java'
 
-require 'swt.jar'
+case java.lang.System.getProperty "os.arch"
+when "i386" then 
+  require 'swt.jar'
+when "x86_64" then
+  require 'swt.macosx.x86_64.jar'
+else
+  raise RuntimeError, "Cannot load appropriate SWT library for your architecture: #{java.lang.System.getProperty "os.arch"}"
+end
 
 require 'rubygems'
 require 'facets/hash'
@@ -19,6 +27,7 @@ require 'shoes/native'
 require 'shoes/window'
 require 'shoes/flow'
 require 'shoes/button'
+require 'shoes/image'
 require 'shoes/animation'
 
 #require 'shoes/elements/element'

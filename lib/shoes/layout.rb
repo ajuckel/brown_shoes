@@ -31,12 +31,11 @@ module Shoes
       anim = Shoes::Animation.new(fps, &blk)
     end
 
-    #
-    #def image(path, opts={})
-    #  image = Image.new(path, @current_panel, opts)
-    #  @elements[image.identifier] = image
-    #  image
-    #end
+    def image(path, opts={})
+      image = Image.new(container, path, opts)
+      #@elements[image.identifier] = image
+      #image
+    end
     #
     #def edit_line(opts={})
     #  eline = Edit_line.new(@current_panel, opts)

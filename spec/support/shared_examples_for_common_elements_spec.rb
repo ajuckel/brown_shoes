@@ -1,6 +1,6 @@
 #require 'set'
 
-shared_examples_for "A Common Element" do
+shared_examples_for "A Common Element2" do
 
   describe "basic dimensions" do
     let(:display) { SWT::Widgets::Display.getDefault }

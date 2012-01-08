@@ -1,7 +1,6 @@
 
 $:<< '../lib'
 require 'java'
-require 'swt.jar'
 
 require 'rspec'
 
@@ -12,3 +11,7 @@ include SwtConstants
 
 require 'mock_helpers'
 include MockHelpers
+
+Dir[File.expand_path('/../spec/support/**/*.rb')].each do |path|
+  require path
+end
